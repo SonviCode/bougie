@@ -1,0 +1,91 @@
+.cadre {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    background: #2c3e50;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.bougie {
+    position: absolute;
+    width: 60px;
+    height: 200px;
+    top: 160px;
+    left: 170px;
+    background: white;
+    border-radius: 3px;
+    box-shadow: inset -10px 0 0 0 #E0e5ff;
+}
+
+.ombre {
+    position: absolute;
+    width: 120px;
+    height: 8px;
+    background: #1b233E;
+    bottom: -8px;
+    left: -30px;
+    border-radius: 3px;
+}
+
+.meche {
+    position: absolute;
+    width: 4px;
+    height: 15px;
+    top: -15px;
+    left: 28px;
+    background: #AD88A9;
+}
+
+.flame {
+    position: absolute;
+    width: 16px;
+    height: 26px;
+    top:-32px;
+    left: 22px;
+    background: #FFad00;
+    border-radius: 8px 8px 8px 8px / 20px 20px 8px 8px;
+
+    animation: 
+    vent 15s ease-in-out infinite,
+    taille 20s ease-in-out infinite,
+    mouvement 10s ease-in-out infinite;
+    transform-origin: 50% 100%;
+}
+
+@keyframes vent {
+
+    0%, 22%, 49%, 62%, 81%, 100% {
+        border-radius: 2px 14px 8px 8px / 20px 20px 8px 8px;
+    }
+
+    14%, 32%, 56%, 70%, 89% {
+        border-radius: 14px 2px 8px 8px / 20px 20px 8px 8px;
+    }
+}
+
+@keyframes taille {
+   
+    0%, 22%, 49%, 62%, 81%, 100% {
+        transform: scale(1,3);
+    }
+
+    14%, 32%, 56%, 70%, 89% {
+        transform: scale(1.4);
+    }
+}
+
+@keyframes mouvement {
+
+    0%, 22%, 49%, 62%, 81%, 100% {
+        box-shadow: 0 0 10px 0 rgba(255, 202, 0, 0.7);
+    }
+
+    14%, 32%, 56%, 70%, 89% {
+        box-shadow: 0 0 20px 0 rgba(255, 202, 0, 0.7);
+    }
+}
